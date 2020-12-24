@@ -70,6 +70,7 @@ const Player = ({
     localStorage.setItem("volume", value)
     setVolume(value)
     audioRef.current.volume = volume
+    if (value === 0) audioRef.current.volume = 0
   }
   const getTime = (time) => {
     return Math.floor(time / 60) + ":" + ("0" + Math.floor(time % 60)).slice(-2)
@@ -95,7 +96,6 @@ const Player = ({
     if (volume >= 0.5) {
       return faVolumeUp
     } else if (volume === 0) {
-      // audioRef.current.volume = 0
       return faVolumeMute
     } else if (volume < 0.5) {
       return faVolumeDown
