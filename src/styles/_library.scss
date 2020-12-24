@@ -1,0 +1,65 @@
+.Library {
+  display: flex;
+  flex-direction: column;
+  width: 20rem;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 10px 10px 30px #c6d5ff5e;
+  background: white;
+  transition: all 0.5s;
+  transform: translateX(-100%);
+  opacity: 0;
+  .songsLib {
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+  }
+  h1 {
+    padding: 1.7rem 0;
+    padding-left: 2rem;
+  }
+  img {
+    width: 30%;
+    border-radius: 7%;
+  }
+  .LibrarySong {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    .description {
+      padding-left: 1rem;
+      .artist,
+      .songName {
+        font-size: 1.3rem;
+        font-weight: 400;
+      }
+      .artist {
+        font-size: 0.7rem;
+        padding: 0.2rem 0;
+      }
+    }
+  }
+}
+.Library-label {
+  position: sticky;
+  top: 0;
+  background: white;
+  border-bottom: 1px solid #c8c8c838;
+  box-shadow: -20px 0px 10px #f0f0f0d4;
+}
+.switchSection {
+  position: sticky;
+  bottom: 0;
+  background: white;
+}
+.Library-active {
+  transform: translateX(0%);
+  opacity: 1;
+}
+.activeLibraryBtn {
+  color: white;
+  background: #363636;
+}

@@ -1,0 +1,49 @@
+html {
+  --size: 1.75rem;
+  --width: calc(3.4 * var(--size));
+}
+.changeTheme span {
+  font-size: var(--size);
+  font-weight: 400;
+  padding-right: 1rem;
+  pointer-events: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #363636;
+}
+.changeTheme {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0.85rem 2rem;
+  box-shadow: -10px -10px 10px #f4f4fc40;
+}
+.switchDiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #edc22b;
+  border-radius: 10rem;
+  padding: 0.5rem 0.7rem;
+  width: var(--width);
+  cursor: pointer;
+}
+.Switchcircle {
+  border-radius: 50%;
+  background: white;
+  width: var(--size);
+  height: var(--size);
+}
+#sun-SVG,
+#moon-SVG {
+  width: var(--size);
+  height: var(--size);
+}
+#moon-SVG {
+  display: none;
+}

@@ -1,0 +1,14 @@
+nav {
+  min-height: 10vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.5rem 0;
+  button {
+    border: none;
+    border: 2px solid rgb(54, 54, 54);
+    padding: 0.5rem;
+    background: transparent;
+    cursor: pointer;
+  }
+}

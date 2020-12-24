@@ -1,0 +1,152 @@
+.player {
+  min-height: 20vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 1.7rem;
+}
+.time-control,
+.play-control {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+.time-control {
+  position: relative;
+  width: 50%;
+  padding-bottom: 1.7rem;
+  .timeInput {
+    width: 100%;
+    cursor: pointer;
+    -webkit-appearance: none;
+    background: transparent;
+    transition: unset !important;
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 16px;
+      height: 16px;
+      background: transparent;
+      border-radius: 50%;
+    }
+    &::-moz-range-thumb {
+      -webkit-appearance: none;
+      width: 16px;
+      height: 16px;
+      background: transparent;
+      border-radius: 50%;
+      border: none;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+}
+.play-control {
+  width: 45%;
+  svg {
+    cursor: pointer;
+  }
+}
+.time {
+  padding: 0 0.8rem;
+}
+.shuffle,
+.repeat {
+  font-size: 1.65rem;
+}
+.track {
+  position: relative;
+  width: 100%;
+  border-radius: 10rem;
+  overflow: hidden;
+  input {
+    height: 100%;
+  }
+  .passedTime {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(212, 212, 212);
+    pointer-events: none;
+    transition: unset !important;
+  }
+}
+.repeatDiv {
+  position: relative;
+}
+.active-repeat {
+  transition: unset !important;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  transform: translate(60%, -60%);
+}
+.cont {
+  position: absolute;
+  right: 0%;
+  bottom: 0%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  transform: translate(120%, -1.4rem);
+  width: 2.4rem;
+  height: 7.5rem;
+  input {
+    -webkit-appearance: none;
+    background: #d4d4d4;
+    width: 100%;
+    height: 100%;
+    padding: 0.1rem 0.2rem;
+    cursor: grabbing;
+  }
+  input:focus {
+    cursor: grabbing;
+  }
+}
+.audioSVG {
+  margin: 0 0.7rem;
+  cursor: pointer;
+  order: 2;
+}
+.track2 {
+  overflow: hidden;
+  border-radius: 10rem;
+  background: #3aac77;
+  height: 1.6rem;
+  transform: rotate(-90deg) translate(50%, 0);
+  width: 7rem;
+  transition: 0.2s ease;
+  input {
+    background: transparent;
+    opacity: 0;
+  }
+}
+.passedVolume {
+  z-index: 10;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+  transform: translateX(0%);
+  background: #d4d4d4;
+}
+// .hoverDiv {
+//   height: 140%;
+//   width: 135%;
+//   position: absolute;
+//   left: -30%;
+//   top: 0;
+//   transform: translateY(-13%);
+//   z-index: 3;
+//   background: white;
+//   pointer-events: all;
+// }
