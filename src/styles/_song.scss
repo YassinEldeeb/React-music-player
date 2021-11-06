@@ -8,6 +8,8 @@
     width: 23.2%;
     border-radius: 50%;
     filter: drop-shadow(0px 0px 10px #0000002e);
+    animation: playingAnimation 22s infinite linear;
+    animation-play-state: paused;
   }
   h2 {
     padding: 1.7rem 1rem 1rem 1rem;
@@ -22,7 +24,7 @@
   background: #c6d5ff;
 }
 .playing {
-  animation: playingAnimation 22s infinite linear !important;
+  animation-play-state: running !important;
 }
 @keyframes playingAnimation {
   from {
